@@ -18,23 +18,20 @@
 
 ## 📌 Overview
 
-Wi-Fi environment & security auditor (read-only)
+
+OWifiAudit is a wireless-network security auditing tool that surveys nearby Wi-Fi networks and assesses their encryption and configuration posture. It enumerates access points, identifies weak or open security (WEP/WPA/WPS), and reports signal, channel and vendor details. It is intended strictly for authorized wireless assessments.
 
 ---
 
 ## ✨ Features
 
-- Wireless interface discovery — iw dev, nmcli device, sysfs /sys/class/net/*/wireless, driver, MAC, state, PHY capabilities and supported bands (2.4/5/6 GHz)
-- Passive network scan through the system tooling: nmcli (terse, escape-aware), iw scan, iwlist scan — automatic fallback chain, timeouts, privilege hints
-- Robust parsers: SSID, BSSID, channel, frequency, signal (dBm / % / bars), RSN/WPA AKM + ciphers, WPS state, hidden SSIDs, PMF (802.11w)
-- Security classifier — OPEN / OWE / WEP / WPA / WPA2 / WPA3 / WPA2-WPA3 transition / Enterprise
-- Embedded OUI vendor table (~230 prefixes) with locally-administered (randomised) BSSID detection
-- Assessment engine — open/WEP (critical), TKIP, WPS, hidden SSIDs, evil-twin / rogue AP heuristics, karma-style lure SSIDs, default router SSIDs
-- Channel congestion analysis + recommendation for 2.4 GHz (1/6/11) and 5 GHz (non-DFS first)
-- Current connection & privacy posture (MAC randomisation, PMF, link rate, gateway)
-- Saved profile audit (NetworkManager / iwd) — never prints secrets, only reports presence
-- ASCII spectrum view (per-channel occupancy)
-- Export TXT / MD / JSON / CSV, save chooser, clipboard, full CLI with --fail-on CI gate
+
+- Access-point discovery with SSID, BSSID, channel and signal strength
+- Encryption posture assessment (open, WEP, WPA/WPA2/WPA3, WPS exposure)
+- OUI vendor identification for discovered access points
+- Rogue/weak-network flagging for defensive review
+- Structured export of survey results for reporting
+- Offline --self-test for safe verification
 
 ---
 
@@ -47,8 +44,11 @@ Wi-Fi environment & security auditor (read-only)
 
 ## 🚀 Usage
 
+
 ```bash
 ./OWifiAudit
+./OWifiAudit --self-test
+./OWifiAudit --help
 ```
 
 ---
