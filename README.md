@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Linux-0a0c10?style=flat-square"/>
   <img src="https://img.shields.io/badge/Category-ONetwork-blue?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-Proprietary-orange?style=flat-square"/>
   <img src="https://img.shields.io/badge/Part%20of-OwlSec%20Toolkit-7b5ea7?style=flat-square"/>
   <img src="https://img.shields.io/badge/Version-1.0.0-cyan?style=flat-square"/>
 </p>
@@ -63,6 +63,6 @@ This tool is part of the **OwlSec** suite — a collection of 275+ security and 
 
 ## ©️ License
 
-MIT License — © Khaled.s.Haddad
+Proprietary — © 2026 Owlsec LLC. All rights reserved.
 
 *Tools are distributed as pre-built executables. Source code is proprietary.*
